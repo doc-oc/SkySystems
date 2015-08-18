@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.ClientType
+namespace Common.ClientTypes
 {
     public interface IClientTypeRepository
     {
-        ClientType Get(int id);
+        List<ClientType> GetAll();
     }
 }

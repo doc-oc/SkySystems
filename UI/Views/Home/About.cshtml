@@ -2,33 +2,15 @@
     ViewBag.Title = "About";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
 
-<article>
-    <p>
-        Use this area to provide additional information.
-    </p>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
-
-    <p>
-        Use this area to provide additional information.
-    </p>
-</article>
-
-<aside>
-    <h3>Aside Title</h3>
-    <p>
-        Use this area to provide additional information.
-    </p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
-</aside>
+<div class="container">
+    <div class="jumbotron velvet-red" id="over">
+        <hgroup class="title">
+            <h1>@ViewBag.Title</h1>
+            <h2>@ViewBag.Message</h2>
+        </hgroup>
+            
+        <p><img src="~/Images/Logo.png" class="center" style="align-items: center; align-content: center; align-self: center;"/></p>
+    </div>
+</div>

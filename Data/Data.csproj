@@ -53,8 +53,71 @@
     <Compile Include="Migrations\201409301957387_First.Designer.cs">
       <DependentUpon>201409301957387_First.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410212027357_MainDatabaseTablesCreateMigrations.cs" />
+    <Compile Include="Migrations\201410212027357_MainDatabaseTablesCreateMigrations.Designer.cs">
+      <DependentUpon>201410212027357_MainDatabaseTablesCreateMigrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410212040518_RemoveNullableOnDateCreatedAndUserIdCreatedBy.cs" />
+    <Compile Include="Migrations\201410212040518_RemoveNullableOnDateCreatedAndUserIdCreatedBy.Designer.cs">
+      <DependentUpon>201410212040518_RemoveNullableOnDateCreatedAndUserIdCreatedBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410221347185_AddUserNameToUserTable.cs" />
+    <Compile Include="Migrations\201410221347185_AddUserNameToUserTable.Designer.cs">
+      <DependentUpon>201410221347185_AddUserNameToUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410251350263_UserIsDeletedNullable.cs" />
+    <Compile Include="Migrations\201410251350263_UserIsDeletedNullable.Designer.cs">
+      <DependentUpon>201410251350263_UserIsDeletedNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410251404191_UserIsDeletedNotNullable.cs" />
+    <Compile Include="Migrations\201410251404191_UserIsDeletedNotNullable.Designer.cs">
+      <DependentUpon>201410251404191_UserIsDeletedNotNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410272258240_AlterClientTypeFieldNameToString.cs" />
+    <Compile Include="Migrations\201410272258240_AlterClientTypeFieldNameToString.Designer.cs">
+      <DependentUpon>201410272258240_AlterClientTypeFieldNameToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410281205543_FixUpRelationshipsStockStockLogs.cs" />
+    <Compile Include="Migrations\201410281205543_FixUpRelationshipsStockStockLogs.Designer.cs">
+      <DependentUpon>201410281205543_FixUpRelationshipsStockStockLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410281601353_RenameStockLogToStockLogOrderAndStockToStockLog.cs" />
+    <Compile Include="Migrations\201410281601353_RenameStockLogToStockLogOrderAndStockToStockLog.Designer.cs">
+      <DependentUpon>201410281601353_RenameStockLogToStockLogOrderAndStockToStockLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410282048125_AddressType-TypeFieldChangedToString.cs" />
+    <Compile Include="Migrations\201410282048125_AddressType-TypeFieldChangedToString.Designer.cs">
+      <DependentUpon>201410282048125_AddressType-TypeFieldChangedToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410282202508_OrderRemoveOrderDate-SameAsDateCreated.cs" />
+    <Compile Include="Migrations\201410282202508_OrderRemoveOrderDate-SameAsDateCreated.Designer.cs">
+      <DependentUpon>201410282202508_OrderRemoveOrderDate-SameAsDateCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410282214201_MoreTweaksToOrderStockAndLog.cs" />
+    <Compile Include="Migrations\201410282214201_MoreTweaksToOrderStockAndLog.Designer.cs">
+      <DependentUpon>201410282214201_MoreTweaksToOrderStockAndLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410282215487_RemoveStockLogOrder.cs" />
+    <Compile Include="Migrations\201410282215487_RemoveStockLogOrder.Designer.cs">
+      <DependentUpon>201410282215487_RemoveStockLogOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410282222039_MoreTweaksToStockAndOrder.cs" />
+    <Compile Include="Migrations\201410282222039_MoreTweaksToStockAndOrder.Designer.cs">
+      <DependentUpon>201410282222039_MoreTweaksToStockAndOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410291258036_OrderTableDateDeliveredAndDateToBeDelivered.cs" />
+    <Compile Include="Migrations\201410291258036_OrderTableDateDeliveredAndDateToBeDelivered.Designer.cs">
+      <DependentUpon>201410291258036_OrderTableDateDeliveredAndDateToBeDelivered.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AddressRepository.cs" />
+    <Compile Include="Repositories\AddressTypeRepository.cs" />
+    <Compile Include="Repositories\AuthenticationRepository.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\ClientTypeRepository.cs" />
+    <Compile Include="Repositories\StockLogRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +133,48 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201409301957387_First.resx">
       <DependentUpon>201409301957387_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410212027357_MainDatabaseTablesCreateMigrations.resx">
+      <DependentUpon>201410212027357_MainDatabaseTablesCreateMigrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410212040518_RemoveNullableOnDateCreatedAndUserIdCreatedBy.resx">
+      <DependentUpon>201410212040518_RemoveNullableOnDateCreatedAndUserIdCreatedBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410221347185_AddUserNameToUserTable.resx">
+      <DependentUpon>201410221347185_AddUserNameToUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410251350263_UserIsDeletedNullable.resx">
+      <DependentUpon>201410251350263_UserIsDeletedNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410251404191_UserIsDeletedNotNullable.resx">
+      <DependentUpon>201410251404191_UserIsDeletedNotNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410272258240_AlterClientTypeFieldNameToString.resx">
+      <DependentUpon>201410272258240_AlterClientTypeFieldNameToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410281205543_FixUpRelationshipsStockStockLogs.resx">
+      <DependentUpon>201410281205543_FixUpRelationshipsStockStockLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410281601353_RenameStockLogToStockLogOrderAndStockToStockLog.resx">
+      <DependentUpon>201410281601353_RenameStockLogToStockLogOrderAndStockToStockLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410282048125_AddressType-TypeFieldChangedToString.resx">
+      <DependentUpon>201410282048125_AddressType-TypeFieldChangedToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410282202508_OrderRemoveOrderDate-SameAsDateCreated.resx">
+      <DependentUpon>201410282202508_OrderRemoveOrderDate-SameAsDateCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410282214201_MoreTweaksToOrderStockAndLog.resx">
+      <DependentUpon>201410282214201_MoreTweaksToOrderStockAndLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410282215487_RemoveStockLogOrder.resx">
+      <DependentUpon>201410282215487_RemoveStockLogOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410282222039_MoreTweaksToStockAndOrder.resx">
+      <DependentUpon>201410282222039_MoreTweaksToStockAndOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410291258036_OrderTableDateDeliveredAndDateToBeDelivered.resx">
+      <DependentUpon>201410291258036_OrderTableDateDeliveredAndDateToBeDelivered.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

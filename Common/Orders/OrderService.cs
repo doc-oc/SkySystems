@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.Order
+namespace Common.Orders
 {
     public class OrderService : IOrderService
     {
@@ -9,13 +10,12 @@ namespace Common.Order
         public OrderService(IOrderRepository orderRepository)
         {
             _orderRepository = orderRepository;
+
         }
 
-        public Order Get(int id)
+        public List<Order> GetByBranch()
         {
-            var order = _orderRepository.Get(id);
-            
-            return order;
+            return _orderRepository.GetByBranch(1);
         }
     }
 }

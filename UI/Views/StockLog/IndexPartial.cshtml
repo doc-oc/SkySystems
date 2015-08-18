@@ -1,0 +1,49 @@
+﻿@model UI.ViewModels.StockLogIndexViewModel
+
+<div id="stock-logs-container">
+    
+    <h1 class="page-header" style="margin-top: 0 !important;">Stock</h1>
+
+    <div class="text-right">    
+        @Ajax.ActionLink("Add stock", "Create", "StockLog", new {}, new AjaxOptions { UpdateTargetId = "modal", OnBegin = "showModal", OnComplete = "AjaxStockLogCreateGetComplete" }, new { @class = "btn btn-default" })
+    </div>
+    
+    <br />
+
+    @if (Model.StockLogs.Any())
+    {
+        <h4>@Html.Raw(string.Format("Stock on hand: {0} bags", @Model.Quantity))</h4>
+        
+        <table class="table table-responsive table-bordered table-condensed table-hover" style="text-align: right">
+            <thead>
+                <tr>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        Date Added
+                    </th>
+                </tr>
+            </thead>
+            
+            @foreach (var stockLog in Model.StockLogs)
+            {
+                <tr>
+                    <td>
+                        @stockLog.InOut
+                    </td>
+                    <td>
+                        @String.Format("{0:dddd dd MMMM yyyy}",stockLog.DateCreated)
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-warning">
+            No Stock records yet
+        </div>
+    }
+
+</div>

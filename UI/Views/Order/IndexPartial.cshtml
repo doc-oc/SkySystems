@@ -1,0 +1,67 @@
+﻿@model UI.ViewModels.OrderIndexViewModel
+
+<div id="orders-container">
+    
+    <h1 class="page-header" style="margin-top: 0 !important;">Orders</h1>
+
+    <div class="text-right">    
+        @Ajax.ActionLink("Create a new order", "Create", "Order", new {}, new AjaxOptions { UpdateTargetId = "modal", OnBegin = "showModal", OnComplete = "AjaxClientCreateGetComplete" }, new { @class = "btn btn-default" })
+    </div>
+    
+    <br />
+
+    @if (Model.Orders.Any())
+    {
+        <table class="table table-responsive table-bordered table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Client Name
+                    </th>
+                    <th>
+                        Client Contact
+                    </th>
+                    <th>
+                        Delivery Address
+                    </th>
+                    <th>
+                        Date Due
+                    </th>
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+            </thead>
+            
+            @foreach (var order in Model.Orders)
+            {
+                <tr>
+                    <td>
+                        @order.Client.CompanyName
+                    </td>
+                    <td>
+                        @order.Client.Tel1
+                    </td>
+                    <td>
+                        @order.Address.AddressLine1 @order.Address.AddressLine2 @order.Address.AddressLine3
+                    </td>
+                    <td>
+                        @String.Format("{0:dddd dd MMMM yyyy} at {0: HH:MM}",order.DateToBeDelivered)
+                    </td>
+                    <td>
+                        @Html.Raw(order.Status ? "Completed" : "Not completed")
+                    </td>
+
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-warning">
+            No orders yet
+        </div>
+    }
+
+</div>

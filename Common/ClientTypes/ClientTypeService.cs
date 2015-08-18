@@ -1,21 +1,20 @@
+using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.ClientType
+namespace Common.ClientTypes
 {
     public class ClientTypeService : IClientTypeService
     {
         private readonly IClientTypeRepository _clientTypeRepository;
 
-        public ClienService(IClienRepository clientTypeRepository)
+        public ClientTypeService(IClientTypeRepository clientTypeRepository)
         {
             _clientTypeRepository = clientTypeRepository;
         }
 
-        public ClientType Get(int id)
+        public List<ClientType> GetAll()
         {
-            var clientType = _clientTypeRepository.Get(id);
-            
-            return clientType;
+            return _clientTypeRepository.GetAll();
         }
     }
 }

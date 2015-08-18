@@ -1,17 +1,5 @@
-﻿html {
-    background-color: #000;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #000;
-    border-top: none;
-    color: #333;
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    margin: 0;
-    padding: 0;
+﻿body {
+    padding-top: 40px;
 }
 
 a {
@@ -101,11 +89,11 @@ h5, h6 {
 #body {
     background-color: #efeeef;
     clear: both;
-    padding-bottom: 35px;
+    min-height: 800px;
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
+        /*background: url("../Images/accent.png") no-repeat;*/
         padding-left: 10px;
         padding-top: 30px;
     }
@@ -330,9 +318,7 @@ aside {
 
 /* login page */
 #loginForm {
-    border-right: solid 2px #c8c8c8;
-    float: left;
-    width: 55%;
+    color: black;
 }
 
     #loginForm .validation-error {
@@ -343,6 +329,7 @@ aside {
     #loginForm .validation-summary-errors ul {
         margin: 0;
         padding: 0;
+        color: black
     }
 
     #loginForm .validation-summary-errors li {
@@ -351,15 +338,12 @@ aside {
         margin: 0;
     }
 
-    #loginForm input {
-        width: 250px;
-    }
-
-    #loginForm input[type="checkbox"],
     #loginForm input[type="submit"],
+    #loginForm input[type="email"],
+    #loginForm input[type="password"],
     #loginForm input[type="button"],
     #loginForm button {
-        width: auto;
+        width: 250px;
     }
 
 #socialLoginForm {

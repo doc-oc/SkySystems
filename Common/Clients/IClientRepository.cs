@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.Client
+namespace Common.Clients
 {
     public interface IClientService
     {
-        public Client Get { get; set; }
+        List<Client> GetAll();
+        int CreateUpdate(Client client);
     }
 }

@@ -1,6 +1,8 @@
+using System;
+using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.Client
+namespace Common.Clients
 {
     public class ClientService : IClientService
     {
@@ -11,11 +13,45 @@ namespace Common.Client
             _clientRepository = clientRepository;
         }
 
+        public List<Client> GetAll()
+        {
+            return _clientRepository.GetAll();
+        }
+
         public Client Get(int id)
         {
-            var client = _clientRepository.Get(id);
-            
-            return client;
+            return _clientRepository.Get(id);
+        }
+
+        public int CreateUpdate(Client client)
+        {
+            var userId = 2;
+            var now = DateTime.Now;
+
+            if (client.Id == 0)
+            {
+                client.DateCreated = now;
+                client.UserIdCreatedBy = userId;
+
+                return _clientRepository.Create(client);
+            }
+            else
+            {
+                var dbRecord = Get(client.Id);
+
+                dbRecord.CompanyName = client.CompanyName;
+                dbRecord.Email = client.Email;
+
+                dbRecord.Tel1 = client.Tel1;
+                dbRecord.Tel2 = client.Tel2;
+
+                dbRecord.DateLastModified = now;
+                dbRecord.UserIdLastModifiedBy = userId;
+
+                _clientRepository.Update(dbRecord);
+
+                return client.Id;
+            }
         }
     }
 }

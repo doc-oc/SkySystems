@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.Order
+namespace Common.Orders
 {
     public interface IOrderService
     {
-        public Order Get { get; set; }
+        List<Order> GetByBranch();
     }
 }
